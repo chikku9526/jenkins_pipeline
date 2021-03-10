@@ -6,6 +6,7 @@ pipeline {
       steps {
         build job: params.cls, parameters: [
                 string(MAKE: params.MAKE, DEPLOY: "params.DEPLOY")
+          ]
         }
       }
     
