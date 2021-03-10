@@ -4,7 +4,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Building'
+        build job: params.cls, parameters: [
+                string(MAKE: params.MAKE, DEPLOY: "params.DEPLOY")
         }
       }
     
