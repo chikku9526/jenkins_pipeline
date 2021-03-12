@@ -4,9 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         build job: 'iss-main/testing3', parameters: [
-                string(MAKE: params.MAKE, DEPLOY: "params.DEPLOY")
+                string(name: 'MAKE', value: params.MAKE), string(name: 'DEPLOY', value: params.DEPLOY), string(name: 'DEST', value: params.DEST)
           ]
-       echo "hello"
       }
     }
       }
