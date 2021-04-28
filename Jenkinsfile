@@ -30,7 +30,7 @@ pipeline {
 				git add -A
                 		git commit -m " Pushed Repo setup files to branches on \$(date) "
                 		set +x
-                		git push https://${GIT_USERNAME}:${PASSWORD}@${DEPLOYMENT_URL} \main > /dev/null 2>&1
+                		git push https://${GIT_USERNAME}:${PASSWORD}@${DEPLOYMENT_URL} > /dev/null 2>&1
                 		set -x
 						
                 }
