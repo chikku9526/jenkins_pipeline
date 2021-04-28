@@ -3,8 +3,8 @@ pipeline {
 	environment {
 		def PROJECT_NAME_DEPLOY="ISSClsServer_Deployment"
 		def DEPLOYMENT_URL="https://github.com/chikku9526/ISSClsServer_Deployment.git"
-		def FileName="issclsserver"
-		def screeName="dmt"
+		def File_Name="issclsserver"
+		def scree_Name="dmt"
 		
 		
 	}
