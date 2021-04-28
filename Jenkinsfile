@@ -1,11 +1,20 @@
 pipeline {
   agent any
+	environment {
+		def PROJECT_NAME_DEPLOY=""
+		def DEPLOYMENT_URL=""
+		def FileName=""
+		def screeName="dmt"
+		
+		
+	}
+	
   stages {
         stage("update server name") {
             steps {
                 script {
                     sh "ls -ltr"
-                    sh "set +x; git clone https://$GIT_USERNAME:$PASSWORD@$DEPLOYMENT_URL; set -x "
+			sh "set +x; git clone https://${GIT_USERNAME}:${PASSWORD}@${DEPLOYMENT_URL}; set -x "
                     sh "ls -ltr"
 		    sh "cd ${PROJECT_NAME_DEPLOY}"
 		    sh "ls -ltr"
