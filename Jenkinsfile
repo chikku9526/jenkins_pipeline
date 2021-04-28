@@ -18,7 +18,7 @@ pipeline {
                     sh "ls -ltr"
 		    sh "cd ${PROJECT_NAME_DEPLOY}"
 		    sh "ls -ltr"
-		    sed '/^<destination id/d' ${FileName}-${params.DESTINATION}-deployment.xml
+		    sed '/^<destination id/d' "${FileName}-${params.DESTINATION}-deployment.xml"
 		    for (String dest : params.SERVERS.split("\n")) {
 			sh """
 				sed -i '7 i <destination id="DEST.ground.chikku.com" hostAndDirectory="DEST.ground.chikku.com:/app/localstorage/SCREEN" setId="Set1"></destination>'
